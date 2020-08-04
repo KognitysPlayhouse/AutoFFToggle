@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoFFToggle", "AutoFFToggle\AutoFFToggle.csproj", "{6CB1C202-EAE3-4091-A5E0-92474504D7BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoFFToggle", "AutoFFToggle\AutoFFToggle.csproj", "{A512715A-EAD3-4758-966B-42F1995A7651}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6CB1C202-EAE3-4091-A5E0-92474504D7BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CB1C202-EAE3-4091-A5E0-92474504D7BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CB1C202-EAE3-4091-A5E0-92474504D7BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CB1C202-EAE3-4091-A5E0-92474504D7BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A512715A-EAD3-4758-966B-42F1995A7651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A512715A-EAD3-4758-966B-42F1995A7651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A512715A-EAD3-4758-966B-42F1995A7651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A512715A-EAD3-4758-966B-42F1995A7651}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {91126174-C91F-480C-8F19-328280F5D83A}
+		SolutionGuid = {DFF3907A-3772-49A7-82E5-E5B18E86627B}
 	EndGlobalSection
 EndGlobal

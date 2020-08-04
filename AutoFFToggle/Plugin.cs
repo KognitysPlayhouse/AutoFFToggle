@@ -1,45 +1,43 @@
 ﻿using System;
-using EXILED;
+using System.Linq;
+using Exiled.API.Features;
+using UnityEngine;
 
 namespace AutoFFToggle
 {
-    public class AutoFFToggle : EXILED.Plugin
-    {
-        public EventHandlers eh;
-        public override string getName => "AutoFFToggle by Kognity";
+	public class AutoFFToggle : Plugin<Config>
+	{
 
-        public override void OnDisable()
-        {
-			if (!Configs.PluginOn)
-			{
-				return;
-			}
+		public static AutoFFToggle AutoFFToggleRef { get; private set; }
+		public override string Name => nameof(AutoFFToggle);
+		public override string Author => "AutoFFToggle by Kognity";
+		public EventHandler Handler;
 
-
-			Events.WaitingForPlayersEvent -= eh.onRoundStart;
-            Events.RoundEndEvent -= eh.onRoundEnd;
-            eh = null;
-        }
-
-        public override void OnEnable()
-        {
-			Configs.Reload();
-
-			if (!Configs.PluginOn)
-			{
-				Log.Info("AutoFFToggle Disabled");
-				return;
-			}
-
-			eh = new EventHandlers();
-            Events.WaitingForPlayersEvent += eh.onRoundStart;
-            Events.RoundEndEvent += eh.onRoundEnd;
-			Log.Info("AutoFFToggle enabled");
+		public AutoFFToggle()
+		{
+			AutoFFToggleRef = this;
 		}
 
-        public override void OnReload()
-        {
-            
-        }
-    }
+		public override void OnEnabled()
+		{
+			if (!AutoFFToggleRef.Config.IsEnabled)
+				{
+					Log.Info("AutoFFToggle Disabled");
+					return;
+				}
+
+			Handler = new EventHandler(this);
+			Exiled.Events.Handlers.Server.RoundStarted += Handler.OnRoundStartEvent;
+			Exiled.Events.Handlers.Server.EndingRound += Handler.OnEndingRoundEvent;
+		}
+
+		public override void OnDisabled()
+		{
+			Exiled.Events.Handlers.Server.RoundStarted -= Handler.OnRoundStartEvent;
+			Exiled.Events.Handlers.Server.EndingRound -= Handler.OnEndingRoundEvent;
+			Handler = null;
+		}
+
+		public override void OnReloaded() { }
+	}
 }

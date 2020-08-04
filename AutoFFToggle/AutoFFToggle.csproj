@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6CB1C202-EAE3-4091-A5E0-92474504D7BB}</ProjectGuid>
+    <ProjectGuid>{A512715A-EAD3-4758-966B-42F1995A7651}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AutoFFToggle</RootNamespace>
@@ -12,7 +12,6 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,17 +31,91 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="AmplifyBloom">
+      <HintPath>..\..\..\references\AmplifyBloom.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\References\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\references\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\References\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\..\..\references\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
-    <Reference Include="EXILED">
-      <HintPath>..\..\References\EXILED.dll</HintPath>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\..\references\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="EXILED_Events">
-      <HintPath>..\..\References\EXILED_Events.dll</HintPath>
+    <Reference Include="ch.sycoforge.Decal">
+      <HintPath>..\..\..\references\ch.sycoforge.Decal.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Logging">
+      <HintPath>..\..\..\references\ch.sycoforge.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Unity.Runtime">
+      <HintPath>..\..\..\references\ch.sycoforge.Unity.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="CloudflareSolverRe">
+      <HintPath>..\..\..\references\CloudflareSolverRe.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandSystem.Core">
+      <HintPath>..\..\..\references\CommandSystem.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DissonanceVoip">
+      <HintPath>..\..\..\references\DissonanceVoip.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.API, Version=2.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EXILED.2.0.7\lib\net472\Exiled.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Events, Version=2.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EXILED.2.0.7\lib\net472\Exiled.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Loader, Version=2.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EXILED.2.0.7\lib\net472\Exiled.Loader.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Permissions, Version=2.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EXILED.2.0.7\lib\net472\Exiled.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Updater, Version=2.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EXILED.2.0.7\lib\net472\Exiled.Updater.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Steamworks.Win64">
+      <HintPath>..\..\..\references\Facepunch.Steamworks.Win64.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror">
+      <HintPath>..\..\..\references\Mirror.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror.Authenticators">
+      <HintPath>..\..\..\references\Mirror.Authenticators.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror.Components">
+      <HintPath>..\..\..\references\Mirror.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CecilX">
+      <HintPath>..\..\..\references\Mono.CecilX.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CecilX.Mdb">
+      <HintPath>..\..\..\references\Mono.CecilX.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CecilX.Pdb">
+      <HintPath>..\..\..\references\Mono.CecilX.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CecilX.Rocks">
+      <HintPath>..\..\..\references\Mono.CecilX.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite">
+      <HintPath>..\..\..\references\Mono.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Nat">
+      <HintPath>..\..\..\references\Mono.Nat.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\references\Mono.Posix.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\references\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.WebBrowser">
+      <HintPath>..\..\..\references\Mono.WebBrowser.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,16 +125,21 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\UnityEngine.CoreModule.dll</HintPath>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\references\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\references\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config.cs" />
+    <Compile Include="Configs.cs" />
     <Compile Include="EventHandlers.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
