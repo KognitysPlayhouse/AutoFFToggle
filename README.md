@@ -1,12 +1,15 @@
 # AutoFFToggle
- AutoFFToggle is a SCP:SL [EXILED](https://github.com/galaxy119/EXILED) Plugin
+ AutoFFToggle is a SCP:SL [Exiled 2](https://github.com/galaxy119/EXILED) Plugin
 
-Simple plugin for mainly FF off servers that will turn on FF at the end of the round and will turn it back off at the start of the next.
+Simple plugin for FF off servers that will turn on FF at the end of the round and will turn it back off at the start of the next.
 
 # Installation
 Just download the .dll file release and place it inside the Plugins folder
 
 # Configs
-| Config        | Value Type | Default Value | Description |
-| :-------------: | :---------: | :------: | :--------- |
-| autofft_on | Bool | true | Enables/disables the plugin |
+```yaml
+auto_f_f_toggle:
+  is_enabled: true
+```
+# TODO
+- Use proper way to set FF on and off when Exiled gets fixed
