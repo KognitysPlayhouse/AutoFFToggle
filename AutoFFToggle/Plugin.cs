@@ -10,7 +10,7 @@ namespace AutoFFToggle
 
 		public static AutoFFToggle AutoFFToggleRef { get; private set; }
 		public override string Name => nameof(AutoFFToggle);
-		public override string Author => "AutoFFToggle by Kognity";
+		public override string Author => "Kognity";
 		public EventHandler Handler;
 
 		public AutoFFToggle()
