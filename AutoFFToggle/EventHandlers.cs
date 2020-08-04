@@ -12,29 +12,15 @@ namespace AutoFFToggle
 
 		public void OnRoundStartEvent()
 		{
-			//Server.FriendlyFire = false;
-
-			//Server.FriendlyFire = false;
-
-			foreach (Player Ply in Player.List)
-			{
-				Ply.IsFriendlyFireEnabled = true;
-			}
-
-
-
+			GameCore.Console.singleton.TypeCommand("/setconfig friendly_fire false");
 		}
 
 		public void OnEndingRoundEvent(EndingRoundEventArgs ev)
 		{
-			foreach (Player Ply in Player.List)
+			if (ev.IsRoundEnded)
 			{
-				Ply.IsFriendlyFireEnabled = false;
-				//Ply.Broadcast(3, "REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+				GameCore.Console.singleton.TypeCommand("/setconfig friendly_fire true");
 			}
-			//Server.FriendlyFire = true;
-			//ServerConsole.FriendlyFire = true;
-
 		}
 	}
 }
