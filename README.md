@@ -12,4 +12,4 @@ auto_f_f_toggle:
   is_enabled: true
 ```
 # TODO
-- Use proper way to set FF on and off when Exiled gets fixed
+- Add more TODO
