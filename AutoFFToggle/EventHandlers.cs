@@ -12,14 +12,20 @@ namespace AutoFFToggle
 
 		public void OnRoundStartEvent()
 		{
-			GameCore.Console.singleton.TypeCommand("/setconfig friendly_fire false");
+			foreach (Player Ply in Player.List)
+			{
+				Ply.IsFriendlyFireEnabled = false;
+			}
 		}
 
 		public void OnEndingRoundEvent(EndingRoundEventArgs ev)
 		{
 			if (ev.IsRoundEnded)
 			{
-				GameCore.Console.singleton.TypeCommand("/setconfig friendly_fire true");
+				foreach (Player Ply in Player.List)
+				{
+					Ply.IsFriendlyFireEnabled = true;
+				}
 			}
 		}
 	}
