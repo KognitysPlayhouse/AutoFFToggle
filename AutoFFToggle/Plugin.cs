@@ -20,15 +20,20 @@ namespace AutoFFToggle
 
 		public override void OnEnabled()
 		{
-			if (!AutoFFToggleRef.Config.IsEnabled)
-				{
-					Log.Info("AutoFFToggle Disabled");
-					return;
-				}
-
-			Handler = new EventHandler(this);
-			Exiled.Events.Handlers.Server.RoundStarted += Handler.OnRoundStartEvent;
-			Exiled.Events.Handlers.Server.EndingRound += Handler.OnEndingRoundEvent;
+			if (Server.FriendlyFire)
+			{
+				Log.Info("Friendly Fire is already enabled on this server. AutoFFToggle will now be disabled.");
+				Config.IsEnabled = false;
+				this.OnDisabled();
+			}
+			else
+			{
+				Log.Info("AutoFFToggle Plugin Enabled!");
+				Log.Info("Thank you for installing my plugin <3 - Kognity");
+				Handler = new EventHandler(this);
+				Exiled.Events.Handlers.Server.RoundStarted += Handler.OnRoundStartEvent;
+				Exiled.Events.Handlers.Server.EndingRound += Handler.OnEndingRoundEvent;
+			}
 		}
 
 		public override void OnDisabled()
