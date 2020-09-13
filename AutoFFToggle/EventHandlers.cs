@@ -12,16 +12,19 @@ namespace AutoFFToggle
 
 		public void OnRoundStartEvent()
 		{
-			Server.FriendlyFire = false;
+			foreach(Player Ply in Player.List)
+			{
+				Ply.IsFriendlyFireEnabled = false;
+			}
 		}
 
 		public void OnEndingRoundEvent(EndingRoundEventArgs ev)
 		{
-			if (ev.IsAllowed)
+			if (ev.IsAllowed && ev.IsRoundEnded)
 			{
-				if (ev.IsRoundEnded)
+				foreach (Player Ply in Player.List)
 				{
-					Server.FriendlyFire = true;
+					Ply.IsFriendlyFireEnabled = true;
 				}
 			}
 		}
