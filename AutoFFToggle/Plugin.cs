@@ -24,7 +24,6 @@ namespace AutoFFToggle
 			{
 				Log.Info("Friendly Fire is already enabled on this server. AutoFFToggle will now be disabled.");
 				Config.IsEnabled = false;
-				this.OnDisabled();
 			}
 			else
 			{
